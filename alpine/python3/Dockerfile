@@ -35,6 +35,7 @@ RUN apk add --update --no-cache \
     libwebp-dev \
 
     # A C language family front-end for LLVM (development files)
+    clang \
     clang-dev \
 
     linux-headers \
