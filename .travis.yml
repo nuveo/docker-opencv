@@ -5,6 +5,8 @@ services:
 
 before_install:
   - docker pull python:3-alpine
+  - docker pull python:2-alpine
 
 script:
   - docker build -t nuveo/opencv:alpine-python3-opencv3 ./alpine/python3
+  - docker build -t nuveo/opencv:alpine-python2-opencv3 ./alpine/python2
