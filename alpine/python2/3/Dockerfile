@@ -24,7 +24,7 @@ RUN mkdir /opt && cd /opt && \
     -D BUILD_opencv_python3=NO \
     .. && \
     make VERBOSE=1 && \
-    make && \
+    make -j${CPUCOUNT} && \
     make install && \
     rm -rf /opt/opencv-${OPENCV_VERSION} && \
     ln -s /usr/local/lib/python2.7/site-packages/cv2.cpython-36m-x86_64-linux-gnu.so /usr/local/lib/python2.7/site-packages/cv2.so
