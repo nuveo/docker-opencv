@@ -7,3 +7,5 @@ Docker image with OpenCV 2 and 3
 - nuveo/opencv:alpine-python3-opencv3
 - nuveo/opencv:alpine-python2-base
 - nuveo/opencv:alpine-python2-opencv3
+- nuveo/opencv:alpine-node8-base
+- nuveo/opencv:alpine-node8-opencv3
