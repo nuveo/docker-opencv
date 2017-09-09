@@ -22,14 +22,9 @@ RUN mkdir /opt && cd /opt && \
     -D BUILD_DOCS=NO \
     -D BUILD_opencv_python2=ON \
     -D BUILD_opencv_python3=NO \
-    -D PYTHON3_EXECUTABLE=/usr/local/bin/python \
-    -D PYTHON3_INCLUDE_DIR=/usr/local/include/python3.6m/ \
-    -D PYTHON3_LIBRARY=/usr/local/lib/libpython3.so \
-    -D PYTHON_LIBRARY=/usr/local/lib/libpython3.so \
-    -D PYTHON3_PACKAGES_PATH=/usr/local/lib/python3.6/site-packages/ \
-    -D PYTHON3_NUMPY_INCLUDE_DIRS=/usr/local/lib/python3.6/site-packages/numpy/core/include/ \
     .. && \
     make VERBOSE=1 && \
     make && \
     make install && \
-    rm -rf /opt/opencv-${OPENCV_VERSION}
+    rm -rf /opt/opencv-${OPENCV_VERSION} && \
+    ln -s /usr/local/lib/python2.7/site-packages/cv2.cpython-36m-x86_64-linux-gnu.so /usr/local/lib/python2.7/site-packages/cv2.so

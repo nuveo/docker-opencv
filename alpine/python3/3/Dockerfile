@@ -32,4 +32,5 @@ RUN mkdir /opt && cd /opt && \
     make VERBOSE=1 && \
     make && \
     make install && \
-    rm -rf /opt/opencv-${OPENCV_VERSION}
+    rm -rf /opt/opencv-${OPENCV_VERSION} && \
+    ln -s /usr/local/lib/python3.6/site-packages/cv2.cpython-36m-x86_64-linux-gnu.so /usr/local/lib/python3.6/site-packages/cv2.so
