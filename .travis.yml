@@ -8,5 +8,9 @@ before_install:
   - docker pull python:2-alpine
 
 script:
-  - docker build -t nuveo/opencv:alpine-python3-opencv3 ./alpine/python3
-  - docker build -t nuveo/opencv:alpine-python2-opencv3 ./alpine/python2
+  - docker build -t nuveo/opencv:alpine-python3-base ./alpine/python3
+  - docker build -t nuveo/opencv:alpine-python3-opencv3 ./alpine/python3/3
+  - docker build -t nuveo/opencv:alpine-python3-opencv2 ./alpine/python3/2
+  - docker build -t nuveo/opencv:alpine-python2-base ./alpine/python2
+  - docker build -t nuveo/opencv:alpine-python2-opencv3 ./alpine/python2/3
+  - docker build -t nuveo/opencv:alpine-python2-opencv2 ./alpine/python2/2
