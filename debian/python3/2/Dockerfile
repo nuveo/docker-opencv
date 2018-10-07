@@ -9,4 +9,5 @@ RUN apt update && \
     cd build && \
     cmake -D CMAKE_BUILD_TYPE=RELEASE -D CMAKE_INSTALL_PREFIX=/usr/local ../opencv && \
     make && \
-    make install
+    make install && \
+    pip install opencv-python
