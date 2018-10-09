@@ -15,3 +15,4 @@ Docker image with OpenCV 2 and 3
 | alpine | node 8 | --- | nuveo/opencv:alpine-node8-base
 | alpine | node 8 | opencv 3 | nuveo/opencv:alpine-node8-opencv3
 | debian | python 3 | opencv 2 | nuveo/opencv:debian-python3-opencv2
+| debian | python 2 | opencv 2 | nuveo/opencv:debian-python2-opencv2
