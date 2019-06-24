@@ -1,7 +1,6 @@
 FROM python:3-alpine
 
-ENV CPUCOUNT 1
-RUN CPUCOUNT=$(cat /proc/cpuinfo | grep '^processor.*:' | wc -l)
+RUN CPUCOUNT=$(nproc)
 
 RUN echo "@edgunity http://nl.alpinelinux.org/alpine/edge/community" >> /etc/apk/repositories && \
     echo "@edge http://nl.alpinelinux.org/alpine/edge/main" >> /etc/apk/repositories && \
